@@ -6,26 +6,20 @@
 
 int main(int argc, char **argv)
 {
-   char* text;
-   char** buffer;
+   char* buffer = NULL;
    int input_file_size;
 
-   if (argc != 2)
+   if (argc != 3)
         handle_error(INVALID_ARGUMENTS);
 
-   input_file_size = get_file_size(argv[1]);
 
-   text = (char*) malloc(input_file_size + 1);
 
-   if (text == NULL)
-        handle_error(MEM_ALLOCATION);
+   input_file_size = read_file(argv[1], &buffer);
 
-   buffer = &text;
+   
 
-   read_file(argv[1], buffer);
 
-   free(text);
-
+//free(buffer);
     return 0;
 }
 

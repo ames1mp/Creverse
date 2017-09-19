@@ -15,6 +15,7 @@ int write_file( char* filename, char *buffer, int size);
 
 int get_file_size(char* filename);
 void handle_error(int error_code);
+void reverse(char* string);
 
 
 
