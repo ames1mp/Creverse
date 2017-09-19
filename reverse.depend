@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1505857294 source:c:\users\mike\desktop\c\reverse\file_utils.c
+	"file_utils.h"
+
+1505857056 c:\users\mike\desktop\c\reverse\file_utils.h
+	<stdio.h>
+	<stdlib.h>
+	<sys/stat.h>
+
+1505569375 source:c:\users\mike\desktop\c\reverse\main.c
+	"file_utils.h"
+
