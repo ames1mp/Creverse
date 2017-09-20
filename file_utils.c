@@ -1,14 +1,33 @@
+/***********************************************************************
+ 	@author Mike Ames
+ 	@version Fall 2017
+***********************************************************************/
 #include "file_utils.h"
 #include <string.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
 
+/***********************************************************************
+ 	Dynamically allocates memory equal to the size of the input file
+ 	plus one byte (for the terminating null-character). Opens the input
+ 	file and reads the text into the allocated memory. Calls the reverse
+ 	function, and returns the the size of the input file.
+    @param filename the file from which to read.
+    @param buffer a pointer to a pointer to the address where we will
+    	   allocate data.
+    @return size the size of the input file in bytes.
+***********************************************************************/
 int read_file( char* filename, char **buffer ) {
 
     int size = get_file_size(filename);
-    //Based on code used in my final project for CIS 361
-    //Original code provided by professor Dr. Vijay Bhuse
-    FILE* f = fopen(filename, "r");
     char line[SIZE];
+
+    //Based on code used in my final project for CIS 361
+    //Original code provided by professor Vijay Bhuse
+    FILE* f = fopen(filename, "r");
+    
     if (f == NULL)
         handle_error(FILE_NOT_FOUND);
 
@@ -20,19 +39,22 @@ int read_file( char* filename, char **buffer ) {
     while(!feof(f)) {
          fgets(line, SIZE, f);
          strcat(*buffer, line);
-
     }
     
-    printf("%s\n", *buffer);
     reverse(*buffer);
-    printf("%s\n", *buffer);
-    
+   
     fclose(f);
 
     return size;
 }
 
-
+/***********************************************************************
+ 	Creates or opens a file to write the buffer to. On the success of
+ 	this operation the file is written to and closed. 
+    @param filename the file to write to.
+    @param buffer a pointer to the string to write to file.
+    @return 0 on success.
+***********************************************************************/
 int write_file( char* filename, char *buffer, int size){
 
     FILE* f = fopen(filename, "w");
@@ -47,15 +69,29 @@ int write_file( char* filename, char *buffer, int size){
     return 0;
 }
 
+/***********************************************************************
+ 	Creates a stat struct, populates it with data about the input file
+ 	and returns the file's size.
+    @param filename the input file
+    @return size the file's size in bytes.
+***********************************************************************/
 int get_file_size(char* filename) {
     struct stat st;
     if ( stat( filename, &st ) == -1 )
         handle_error(FILE_NOT_FOUND);
     int size = st.st_size;
+    
     return size;
 }
 
+/***********************************************************************
+ 	Reverses the text of a string.
+    @param string the string to reverse.
+***********************************************************************/
 void reverse(char* string) {
+/*based on code from:
+https://www.daniweb.com/programming/software-development
+/threads/311002/strrev-equivalent-in-linux*/
     int first = 0;
     int last = strlen(string) - 1;
     char temp;
@@ -67,6 +103,7 @@ void reverse(char* string) {
         ++first;
         --last;
     }
+
     return;
 }
 
@@ -99,5 +136,6 @@ void handle_error(int error_code) {
             break;
 
     }
+    
     exit(1);
 }

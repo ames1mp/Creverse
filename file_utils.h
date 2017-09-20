@@ -1,3 +1,7 @@
+/***********************************************************************
+ 	@author Mike Ames
+ 	@version Fall 2017
+***********************************************************************/
 #ifndef FILE_UTILS
 #define FILE_UTILS
 
@@ -18,28 +22,5 @@ int write_file( char* filename, char *buffer, int size);
 int get_file_size(char* filename);
 void handle_error(int error_code);
 void reverse(char* string);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif // FILE_UTILS
