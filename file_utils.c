@@ -26,12 +26,25 @@ int read_file( char* filename, char **buffer ) {
     printf("%s\n", *buffer);
     reverse(*buffer);
     printf("%s\n", *buffer);
+    
+    fclose(f);
+
     return size;
 }
 
 
 int write_file( char* filename, char *buffer, int size){
 
+    FILE* f = fopen(filename, "w");
+    
+    if(f == NULL)
+        handle_error(FILE_CREATION);
+    if( (fputs(buffer, f)) == EOF)
+        handle_error(FILE_WRITE);
+
+    fclose(f);
+
+    return 0;
 }
 
 int get_file_size(char* filename) {
@@ -77,6 +90,12 @@ void handle_error(int error_code) {
             break;
         case 2 :
             fprintf( stderr, "Memory allocation error.\n" );
+            break;
+        case 3 :
+            fprintf( stderr, "Error creating or opening file.\n" );
+            break;
+        case 4 :
+            fprintf( stderr, "Error writing to file.\n" );
             break;
 
     }

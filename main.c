@@ -6,7 +6,7 @@
 
 int main(int argc, char **argv)
 {
-   char* buffer = NULL;
+   char* buffer;
    int input_file_size;
 
    if (argc != 3)
@@ -16,10 +16,12 @@ int main(int argc, char **argv)
 
    input_file_size = read_file(argv[1], &buffer);
 
+   write_file(argv[2],buffer, input_file_size);
+
    
 
 
-//free(buffer);
+free(buffer);
     return 0;
 }
 

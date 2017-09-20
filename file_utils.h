@@ -9,6 +9,8 @@
 #define INVALID_ARGUMENTS 0
 #define FILE_NOT_FOUND 1
 #define MEM_ALLOCATION 2
+#define FILE_CREATION 3
+#define FILE_WRITE 4
 
 int read_file( char* filename, char **buffer );
 int write_file( char* filename, char *buffer, int size);
