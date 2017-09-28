@@ -16,7 +16,7 @@
  	function, and returns the the size of the input file.
     @param filename the file from which to read.
     @param buffer a pointer to a pointer to the address where we will
-    	   allocate data.
+           allocate data.
     @return size the size of the input file in bytes.
 ***********************************************************************/
 int read_file( char* filename, char **buffer ) {
@@ -24,26 +24,32 @@ int read_file( char* filename, char **buffer ) {
     int size = get_file_size(filename);
     char line[SIZE];
 
-    //Based on code used in my final project for CIS 361
-    //Original code provided by professor Vijay Bhuse
+    //Based on code used in my final project for CIS 361.
+    //Original code provided by professor Vijay Bhuse.
     FILE* f = fopen(filename, "r");
     
     if (f == NULL)
         handle_error(FILE_NOT_FOUND);
 
-    *buffer = malloc(size + 1);
+//When the test file ended with a blank line, I would get the 
+//Following error when running the program:
+// Error in `./a': double free or corruption (out): 0x00000000024e23e0
+//Assuming that there was a problem somewhere with extra invisible
+//control characters I added an additional bytes to the buffer and
+//this resolved the issue.    
+    *buffer = (char*) malloc(sizeof(char) * size + 10);
 
    if (buffer == NULL)
         handle_error(MEM_ALLOCATION);
 
     while(!feof(f)) {
          fgets(line, SIZE, f);
-         strcat(*buffer, line);
+         strncat(*buffer, line, size - strlen(line) - 1);
+         //size of destination buffer - size of destination line - 1
     }
     
-    reverse(*buffer);
-   
-    fclose(f);
+    if ( (fclose(f)) != 0)
+        handle_error(FILE_CLOSE_IN);
 
     return size;
 }
@@ -64,7 +70,8 @@ int write_file( char* filename, char *buffer, int size){
     if( (fputs(buffer, f)) == EOF)
         handle_error(FILE_WRITE);
 
-    fclose(f);
+    if ( (fclose(f)) != 0)
+        handle_error(FILE_CLOSE_OUT);
 
     return 0;
 }
@@ -134,7 +141,12 @@ void handle_error(int error_code) {
         case 4 :
             fprintf( stderr, "Error writing to file.\n" );
             break;
-
+        case 5 :
+            fprintf( stderr, "Error closing the IN file.\n" );
+            break;
+        case 6 :
+            fprintf( stderr, "Error closing the OUT file.\n" );
+            break;
     }
     
     exit(1);
