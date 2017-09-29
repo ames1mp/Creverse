@@ -1,10 +1,160 @@
 
-.tseT
-.tseT
+}
+;)1(tixe    
+    
+}    
+;kaerb            
+;) "n\.elif TUO eht gnisolc rorrE" ,rredts (ftnirpf            
+: 6 esac        
+;kaerb            
+;) "n\.elif NI eht gnisolc rorrE" ,rredts (ftnirpf            
+: 5 esac        
+;kaerb            
+;) "n\.elif ot gnitirw rorrE" ,rredts (ftnirpf            
+: 4 esac        
+;kaerb            
+;) "n\.elif gninepo ro gnitaerc rorrE" ,rredts (ftnirpf            
+: 3 esac        
+;kaerb            
+;) "n\.rorre noitacolla yromeM" ,rredts (ftnirpf            
+: 2 esac        
+;kaerb            
+;) "n\yrotcerid ro elif hcus oN" ,rredts (ftnirpf            
+: 1 esac        
+;kaerb            
+;) "n\]EMANELIF_TUPTUO["                    
+" ]EMANELIF_TUPNI[ esrever/. :egasU"                    
+,"s%" ,rredts (ftnirpf            
+: 0 esac        
 
-. . . tub ,rewsna tonnac ti
-hcihw snoitseuq yb denedrub si tI
- .egdelwonk sti fo seiceps
-eno ni taht ,etaf railucep siht sah nosaer namuH
+{ )edoc_rorre(hctiws    
 
-.tset a si sihT
+{ )edoc_rorre tni(rorre_eldnah diov
+/***********************************************************************
+.derrucco rorre fo    
+epyt tahw setacidni hcihw regetni denifed orcam a edoc_rorre marap@    
+'1' htiw margorp eht stixe dna rredts ot egassem rorre na stnirP    
+***********************************************************************/
+
+
+}
+;nruter    
+
+}    
+;tsal--        
+;tsrif++        
+;pmet = ]tsal[gnirts        
+;]tsal[gnirts = ]tsrif[gnirts        
+;]tsrif[gnirts = pmet        
+{ )tsal < tsrif( elihw    
+
+;pmet rahc    
+;1 - )gnirts(nelrts = tsal tni    
+;0 = tsrif tni    
+/*xunil-ni-tnelaviuqe-verrts/200113/sdaerht/
+tnempoleved-erawtfos/gnimmargorp/moc.bewinad.www//:sptth
+:morf edoc no desab*/
+{ )gnirts *rahc(esrever diov
+/***********************************************************************
+.esrever ot gnirts eht gnirts marap@    
+.gnirts a fo txet eht sesreveR	 
+***********************************************************************/
+
+}
+;ezis nruter    
+    
+;ezis_ts.ts = ezis tni    
+;)DNUOF_TON_ELIF(rorre_eldnah        
+) 1- == ) ts& ,emanelif (tats ( fi    
+;ts tats tcurts    
+{ )emanelif *rahc(ezis_elif_teg tni
+/***********************************************************************
+.setyb ni ezis s'elif eht ezis nruter@    
+elif tupni eht emanelif marap@    
+.ezis s'elif eht snruter dna	 
+elif tupni eht tuoba atad htiw ti setalupop ,tcurts tats a setaerC	 
+***********************************************************************/
+
+}
+;0 nruter    
+
+;)TUO_ESOLC_ELIF(rorre_eldnah        
+)0 =! ))f(esolcf( ( fi    
+
+;)ETIRW_ELIF(rorre_eldnah        
+)FOE == ))f ,reffub(stupf( (fi    
+;)NOITAERC_ELIF(rorre_eldnah        
+)LLUN == f(fi    
+    
+;)"w" ,emanelif(nepof = f *ELIF    
+
+{)ezis tni ,reffub* rahc ,emanelif *rahc (elif_etirw tni
+/***********************************************************************
+.sseccus no 0 nruter@    
+.setyb ni reffub eht fo ezis eht ezis marap@    
+.elif ot etirw ot gnirts eht ot retniop a reffub marap@    
+.ot etirw ot elif eht emanelif marap@    
+ .desolc dna ot nettirw si elif eht noitarepo siht	 
+fo sseccus eht nO .ot reffub eht etirw ot elif a snepo ro setaerC	 
+***********************************************************************/
+
+}
+;ezis nruter    
+
+;)NI_ESOLC_ELIF(rorre_eldnah        
+)0 =! ))f(esolcf( ( fi    
+    
+}    
+1 - enil noitanitsed fo ezis - reffub noitanitsed fo ezis//         
+;)1 - )enil(nelrts - ezis ,enil ,reffub*(tacnrts         
+;kaerb            
+))f(foef( fi         
+.kaerb ew os ,eciwt reffub eht ot//         
+deipoc enil tsal eht tnaw t'nod eW .emas eht niamer rts fo//         
+stnetnoc eht daer eb dluoc srahc yna erofeb tes si foef fi //         
+;)f ,EZIS ,enil(stegf         
+{ ))f(foef!(elihw    
+
+;)NOITACOLLA_MEM(rorre_eldnah        
+)LLUN == reffub( fi    
+
+;)ezis * )rahc(foezis(collam )*rahc( = reffub*    
+    .eussi eht devloser//
+ siht dna ezis reffub eht ot setyb dedda I sretcarahc lortnoc//
+elbisivni artxe htiw erehwemos melborp a saw ereht taht gnimussA//
+0e32e42000000000x0 :)tuo( noitpurroc ro eerf elbuod :'a/.` ni rorrE//
+:margorp eht gninnur nehw rorre gniwolloF//
+ eht teg dluow I ,enil knalb a htiw dedne elif tset eht nehW//
+
+;)DNUOF_TON_ELIF(rorre_eldnah        
+)LLUN == f( fi    
+    
+;)"r" ,emanelif(nepof = f *ELIF    
+.esuhB yajiV .rD yb dedivorp edoc lanigirO//    
+.163 SIC rof tcejorp lanif ym ni desu edoc no desaB//    
+
+;]EZIS[enil rahc    
+;)emanelif(ezis_elif_teg = ezis tni    
+
+{ ) reffub** rahc ,emanelif *rahc (elif_daer tni
+/***********************************************************************
+.setyb ni elif tupni eht fo ezis eht ezis nruter@    
+.atad etacolla           
+lliw ew erehw sserdda eht ot retniop a ot retniop a reffub marap@    
+.daer ot hcihw morf elif eht emanelif marap@    
+.yromem detacolla    
+ eht otni txet eht sdaer dna elif tupni eht snepO .)srotide    
+ txet emos yb dedda sretcarahc lortnoc rof( setyb net sulp	 
+elif tupni eht fo ezis eht ot lauqe yromem setacolla yllacimanyD	 
+***********************************************************************/
+
+>h.tats/sys< edulcni#
+>h.bildts< edulcni#
+>h.oidts< edulcni#
+>h.epytc< edulcni#
+>h.gnirts< edulcni#
+"h.slitu_elif" edulcni#
+/***********************************************************************
+7102 llaF noisrev@	 
+semA ekiM rohtua@	 
+***********************************************************************/
