@@ -11,9 +11,7 @@
 
 /***********************************************************************
  	Dynamically allocates memory equal to the size of the input file
- 	plus ten bytes (for control characters added by some text 
-    editors). Opens the input file and reads the text into the 
-    allocated memory.
+ 	Opens the input file and reads the text into the allocated memory.
     @param filename the file from which to read.
     @param buffer a pointer to a pointer to the address where we will
            allocate data.
@@ -23,6 +21,7 @@ int read_file( char* filename, char **buffer ) {
 
     int size = get_file_size(filename);
     char line[SIZE];
+    char *last;
 
     //Based on code used in my final project for CIS 361.
     //Original code provided by Dr. Vijay Bhuse.
@@ -30,27 +29,15 @@ int read_file( char* filename, char **buffer ) {
     
     if (f == NULL)
         handle_error(FILE_NOT_FOUND);
-
-//When the test file ended with a blank line, I would get the 
-//Following error when running the program:
-//Error in `./a': double free or corruption (out): 0x00000000024e23e0
-//Assuming that there was a problem somewhere with extra invisible
-//control characters I added bytes to the buffer size and this 
-//resolved the issue.    
+  
     *buffer = (char*) malloc(sizeof(char) * size);
 
     if (buffer == NULL)
         handle_error(MEM_ALLOCATION);
 
-    while(!feof(f)) {
-         fgets(line, SIZE, f);
-         // if feof is set before any chars could be read the contents
-         //of str remain the same. We don't want the last line copied
-         //to the buffer twice, so we break.
-         if (feof(f))
-            break;
-         strncat(*buffer, line, size - strlen(line) - 1);
-         //size of destination buffer - size of destination line - 1
+    while( fgets(line, SIZE, f) ) {
+         
+        strcat(*buffer, line);
     }
     
     if ( (fclose(f)) != 0)

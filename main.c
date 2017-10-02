@@ -6,8 +6,6 @@
 #include "file_utils.h"
 #include <stdlib.h>
 
-
-
 /***********************************************************************
   Main driver for the reverse program. Assures that the correct
   number of arguments has been provided.
@@ -33,5 +31,3 @@ int main(int argc, char **argv) {
     
    return 0;
 }
-
-

@@ -105,27 +105,15 @@ fo sseccus eht nO .ot reffub eht etirw ot elif a snepo ro setaerC
 )0 =! ))f(esolcf( ( fi    
     
 }    
-1 - enil noitanitsed fo ezis - reffub noitanitsed fo ezis//         
-;)1 - )enil(nelrts - ezis ,enil ,reffub*(tacnrts         
-;kaerb            
-))f(foef( fi         
-.kaerb ew os ,eciwt reffub eht ot//         
-deipoc enil tsal eht tnaw t'nod eW .emas eht niamer rts fo//         
-stnetnoc eht daer eb dluoc srahc yna erofeb tes si foef fi //         
-;)f ,EZIS ,enil(stegf         
-{ ))f(foef!(elihw    
+;)enil ,reffub*(tacrts        
+         
+{ ) )f ,EZIS ,enil(stegf (elihw    
 
 ;)NOITACOLLA_MEM(rorre_eldnah        
 )LLUN == reffub( fi    
 
 ;)ezis * )rahc(foezis(collam )*rahc( = reffub*    
-    .eussi eht devloser//
- siht dna ezis reffub eht ot setyb dedda I sretcarahc lortnoc//
-elbisivni artxe htiw erehwemos melborp a saw ereht taht gnimussA//
-0e32e42000000000x0 :)tuo( noitpurroc ro eerf elbuod :'a/.` ni rorrE//
-:margorp eht gninnur nehw rorre gniwolloF//
- eht teg dluow I ,enil knalb a htiw dedne elif tset eht nehW//
-
+  
 ;)DNUOF_TON_ELIF(rorre_eldnah        
 )LLUN == f( fi    
     
@@ -133,6 +121,7 @@ elbisivni artxe htiw erehwemos melborp a saw ereht taht gnimussA//
 .esuhB yajiV .rD yb dedivorp edoc lanigirO//    
 .163 SIC rof tcejorp lanif ym ni desu edoc no desaB//    
 
+;tsal* rahc    
 ;]EZIS[enil rahc    
 ;)emanelif(ezis_elif_teg = ezis tni    
 
@@ -142,9 +131,7 @@ elbisivni artxe htiw erehwemos melborp a saw ereht taht gnimussA//
 .atad etacolla           
 lliw ew erehw sserdda eht ot retniop a ot retniop a reffub marap@    
 .daer ot hcihw morf elif eht emanelif marap@    
-.yromem detacolla    
- eht otni txet eht sdaer dna elif tupni eht snepO .)srotide    
- txet emos yb dedda sretcarahc lortnoc rof( setyb net sulp	 
+.yromem detacolla eht otni txet eht sdaer dna elif tupni eht snepO	 
 elif tupni eht fo ezis eht ot lauqe yromem setacolla yllacimanyD	 
 ***********************************************************************/
 
